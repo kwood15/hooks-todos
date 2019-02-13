@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from './components/Header';
 import Todo from './components/Todo';
 import TodoForm from './components/TodoForm';
 import './App.css';
@@ -29,6 +30,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <Header />
       <h1>View Todos:</h1>
       <div className="todo-list">
         {todos.map((todo, index) => (
