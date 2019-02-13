@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Todo = ({ todo, index, completeTodo, removeTodo }) => (
+const TodoItem = ({ todo, index, completeTodo, removeTodo }) => (
   <div
     className="todo"
     style={{ textDecoration: todo.isCompleted ? 'line-through' : '' }}
@@ -14,4 +14,4 @@ const Todo = ({ todo, index, completeTodo, removeTodo }) => (
   </div>
 );
 
-export default Todo;
+export default TodoItem;

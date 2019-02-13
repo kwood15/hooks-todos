@@ -8,6 +8,7 @@ app
   .route('/api/todos')
   .get((req, res) => res.send(todos))
   .post((req, res) => res.send('Added'))
-  .put((req, res) => res.send('Completed'));
+  .put((req, res) => res.send('Completed'))
+  .delete((req, res) => res.send('Deleted'));
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
