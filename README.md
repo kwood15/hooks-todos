@@ -14,10 +14,10 @@
 npm install
 ```
 
-**Start**
+**Run**
 
 ```
-npm start
+npm run dev
 ```
 
 **Test**

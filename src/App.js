@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Todo from './components/Todo';
 import TodoForm from './components/TodoForm';
 import './App.css';
 
 const App = () => {
-  const [todos, setTodos] = useState([
-    { text: 'Testing out hooks 🦄', isCompleted: false },
-    { text: 'Loving the new features', isCompleted: false },
-    { text: "Let's build a great app", isCompleted: false }
-  ]);
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/todos')
+      .then(response => response.json())
+      .then(data => setTodos(data))
+      .catch(error => error);
+  }, []);
 
   const addTodo = text => {
     const newTodos = [...todos, { text }];
